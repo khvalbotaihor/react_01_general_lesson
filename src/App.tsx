@@ -4,12 +4,12 @@ import Accordion from "./components/Acccordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 
 
-function hello() {
-    debugger;
-    alert("Hello it-kamasutra")
+function sum(a:number,b:number) {
+    alert(a+b)
 }
 
-//hello();
+/*sum(3,4);
+sum(100,333);*/
 
 // function declaration - ми будемо використовувати для обявления компонент
 function App() {
@@ -21,20 +21,30 @@ function App() {
 
     return (
         <div>
-            <AppTitle/>
-            <Rating/>
-            <Accordion/>
-            <Rating/>
+            <PageTitle title={"This is App component"}/>
+            <PageTitle title={"My friends"}/>
+            Article 1
+            <Rating value={3}/>
+            <Accordion title={"first title"}/>
+            <Accordion title={"second title"}/>
+            Article 2
+            <Rating value={0}/>
+            <Rating value={1}/>
+            <Rating value={2}/>
+            <Rating value={3}/>
+            <Rating value={4}/>
+            <Rating value={5}/>
         </div>
     );
 }
 
 
-function AppTitle() {
-    console.log("AppTitle rendering");
+function PageTitle(props:any) {
+    debugger;
+    console.log("PageTitle rendering");
 
     return (
-        <>This is App component</>
+        <h1>{props.title}</h1>
     )
 }
 
