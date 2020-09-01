@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Accordion from "./components/Acccordion/Accordion";
+import {Rating} from "./components/Rating/Rating";
 
 
 function hello() {
@@ -28,46 +29,6 @@ function App() {
     );
 }
 
-
-// function expression
-const App2 = function () {
-    return (
-        <div className="App">
-            <div>This is App component
-            </div>
-        </div>
-    );
-}
-
-// стрелочная функция - це те з чим ми будемо працювати - це ми будемо використовувати для обработчика собитий
-const App3 = () => {
-    return (
-        <div className="App">
-            <div>This is App component</div>
-        </div>
-    );
-}
-
-
-function Rating() {
-    console.log("Rating rendering");
-    return (
-        <>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-        </>
-    )
-}
-
-function Star() {
-    console.log("Start rendering")
-    return (
-        <div>star</div>
-    )
-}
 
 function AppTitle() {
     console.log("AppTitle rendering");
