@@ -1,26 +1,81 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+
+function hello(){
+    debugger;
+    alert("Hello it-kamasutra")
+}
+//hello();
+
+// function declaration - ми будемо використовувати для обявления компонент
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    debugger;
+    // ми здесь должни делать штото полезное
+    //  и в конце функция обязана вернуть JSX
+    //бейбел траспілятор перетворює JSX в обичний JS код
+
+    return (
+      <div>This is App component
+          <Rating />
+          <Accordion />
+      </div>
   );
+}
+
+
+
+// function expression
+const App2 = function () {
+    return (
+        <div className="App">
+            <div>This is App component
+            </div>
+        </div>
+    );
+}
+
+// стрелочная функция - це те з чим ми будемо працювати - це ми будемо використовувати для обработчика собитий
+const App3 = () => {
+    return (
+        <div className="App">
+            <div>This is App component</div>
+        </div>
+    );
+}
+
+
+function Rating(){
+    debugger;
+    return(
+        <div>
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+        </div>
+    )
+}
+
+function Star(){
+    return(
+        <div>star</div>
+    )
+}
+
+function Accordion() {
+    debugger;
+    return(
+        <div>
+        <h3>Menu</h3>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+    )
 }
 
 export default App;
