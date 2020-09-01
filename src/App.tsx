@@ -2,27 +2,30 @@ import React from 'react';
 import './App.css';
 
 
-function hello(){
+function hello() {
     debugger;
     alert("Hello it-kamasutra")
 }
+
 //hello();
 
 // function declaration - ми будемо використовувати для обявления компонент
 function App() {
-    debugger;
+    console.log("App rendering")
+
     // ми здесь должни делать штото полезное
     //  и в конце функция обязана вернуть JSX
     //бейбел траспілятор перетворює JSX в обичний JS код
 
     return (
-      <div>This is App component
-          <Rating />
-          <Accordion />
-      </div>
-  );
+        <div>
+            <AppTitle/>
+            <Rating/>
+            <Accordion/>
+            <Rating/>
+        </div>
+    );
 }
-
 
 
 // function expression
@@ -45,37 +48,65 @@ const App3 = () => {
 }
 
 
-function Rating(){
-    debugger;
-    return(
-        <div>
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-        </div>
+function Rating() {
+    console.log("Rating rendering");
+    return (
+        <>
+            <Star/>
+            <Star/>
+            <Star/>
+            <Star/>
+            <Star/>
+        </>
     )
 }
 
-function Star(){
-    return(
+function Star() {
+    console.log("Start rendering")
+    return (
         <div>star</div>
     )
 }
 
+function AppTitle() {
+    console.log("AppTitle rendering");
+
+    return (
+        <>This is App component</>
+    )
+}
+
 function Accordion() {
-    debugger;
-    return(
+    console.log("Accordion rendering");
+    return (
         <div>
-        <h3>Menu</h3>
+            <AccordionTitle/>
+            <AccordionBody/>
+        </div>
+    )
+}
+
+function AccordionTitle() {
+    console.log("AccordionTitle rendering");
+
+    return (<h3>Menu</h3>
+    )
+}
+
+function AccordionBody() {
+    console.log("AccordionBody rendering");
+
+    return (
+        <>
+            <h3>Menu</h3>
             <ul>
                 <li>1</li>
                 <li>2</li>
                 <li>3</li>
             </ul>
-        </div>
+        </>
     )
 }
+
 
 export default App;
