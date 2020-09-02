@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Accordion from "./components/Acccordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
-
+import {OnOff} from '../src/components/OnOff/OnOff'
 
 function sum(a:number,b:number) {
     alert(a+b)
@@ -34,9 +34,14 @@ function App() {
             <Rating value={3}/>
             <Rating value={4}/>
             <Rating value={5}/>
+
+            <OnOff switchedOn={true}/>
+            <OnOff switchedOn={false}/>
+
         </div>
     );
 }
+
 
 type PageTitlePropsType = {
     title: string
