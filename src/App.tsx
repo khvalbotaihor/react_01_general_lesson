@@ -39,6 +39,8 @@ function App() {
             <OnOff />
 
             <OnOff />
+            <OnOff />
+            <OnOff />
 
 
 
