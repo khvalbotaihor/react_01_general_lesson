@@ -22,6 +22,10 @@ function App() {
     //бейбел траспілятор перетворює JSX в обичний JS код
 
     return (
+
+
+
+
         <div className={"App"}>
             <PageTitle title={"This is App component"}/>
             <PageTitle title={"My friends"}/>
