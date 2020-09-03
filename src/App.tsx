@@ -35,8 +35,11 @@ function App() {
             <Rating value={4}/>
             <Rating value={5}/>
 
-            <OnOff switchedOn={true}/>
-            <OnOff switchedOn={false}/>
+
+            <OnOff on={false}/>
+            <OnOff on={true}/>
+            <OnOff on={false}/>
+
 
         </div>
     );
