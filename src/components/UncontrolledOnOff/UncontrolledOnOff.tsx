@@ -4,7 +4,7 @@ type PropsType = {
     //on: boolean
 }
 
-export function OnOff(props:PropsType) {
+export function UncontrolledOnOff(props:PropsType) {
     console.log("UncontrolledOnOff rendering")
     let [on, setOn] = useState(false); // hook use state
 
