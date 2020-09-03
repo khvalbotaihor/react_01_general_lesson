@@ -3,6 +3,7 @@ import './App.css';
 import Accordion from "./components/Acccordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 import {OnOff} from '../src/components/OnOff/OnOff'
+import {UncontrolledAccordion} from "./components/UncontrolledAcccordion/Accordion";
 
 function sum(a:number,b:number) {
     alert(a+b)
@@ -25,8 +26,12 @@ function App() {
             <PageTitle title={"My friends"}/>
             Article 1
             <Rating value={3}/>
-            <Accordion titleValue={"Menu"} collapsed={true}/>
-            <Accordion titleValue={"Users"} collapsed={false}/>
+            <Accordion titleValue={"Menu"} />
+            <Accordion titleValue={"Users"} />
+
+            <UncontrolledAccordion titleValue={"Menu"}/>
+            <UncontrolledAccordion titleValue={"Users"}/>
+
             Article 2
             <Rating value={0}/>
             <Rating value={1}/>
