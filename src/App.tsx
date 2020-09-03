@@ -3,7 +3,7 @@ import './App.css';
 import Accordion from "./components/Acccordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 import {OnOff} from '../src/components/OnOff/OnOff'
-import {UncontrolledAccordion} from "./components/UncontrolledAcccordion/Accordion";
+import {UncontrolledAccordion} from "./components/UncontrolledAcccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 
 function sum(a:number,b:number) {
