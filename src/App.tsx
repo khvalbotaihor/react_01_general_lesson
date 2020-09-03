@@ -4,6 +4,7 @@ import Accordion from "./components/Acccordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 import {OnOff} from '../src/components/OnOff/OnOff'
 import {UncontrolledAccordion} from "./components/UncontrolledAcccordion/Accordion";
+import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 
 function sum(a:number,b:number) {
     alert(a+b)
@@ -47,6 +48,10 @@ function App() {
             <OnOff />
             <OnOff />
 
+
+{/*
+          <UncontrolledRating />
+*/}
 
 
         </div>

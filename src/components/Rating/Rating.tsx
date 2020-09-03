@@ -4,7 +4,7 @@ type RatingPropsType = {
     value: 0|1|2|3|4|5
 }
 export function Rating(props:RatingPropsType) {
-    console.log("Rating rendering");
+    console.log("UncontrolledRating rendering");
 
     return (
         <div>
