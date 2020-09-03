@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Accordion from "./components/Acccordion/Accordion";
-import {Rating} from "./components/Rating/Rating";
+import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {OnOff} from '../src/components/OnOff/OnOff'
 import {UncontrolledAccordion} from "./components/UncontrolledAcccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
@@ -14,23 +14,22 @@ function sum(a:number,b:number) {
 sum(100,333);*/
 
 // function declaration - ми будемо використовувати для обявления компонент
-function App() {
+function App(props:any) {
     console.log("App rendering")
 
     // ми здесь должни делать штото полезное
     //  и в конце функция обязана вернуть JSX
     //бейбел траспілятор перетворює JSX в обичний JS код
+    let[ratingValue, setRatingValue] = useState<RatingValueType>(4);
 
     return (
-
-
-
-
         <div className={"App"}>
             <PageTitle title={"This is App component"}/>
             <PageTitle title={"My friends"}/>
             Article 1
+{/*
             <Rating value={3}/>
+*/}
             <Accordion titleValue={"Menu"} />
             <Accordion titleValue={"Users"} />
 
@@ -38,12 +37,13 @@ function App() {
             <UncontrolledAccordion titleValue={"Users"}/>
 
             Article 2
-            <Rating value={0}/>
-            <Rating value={1}/>
-            <Rating value={2}/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Rating value={5}/>
+            <Rating value={ratingValue}
+                    onClick={setRatingValue}/>
+{/*            <Rating value={ratingValue}/>
+            <Rating value={ratingValue}/>
+            <Rating value={ratingValue}/>
+            <Rating value={ratingValue}/>
+            <Rating value={ratingValue}/>*/}
 
 
             <OnOff />
