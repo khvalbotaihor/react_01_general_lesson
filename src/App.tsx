@@ -21,6 +21,7 @@ function App(props:any) {
     //  и в конце функция обязана вернуть JSX
     //бейбел траспілятор перетворює JSX в обичний JS код
     let[ratingValue, setRatingValue] = useState<RatingValueType>(4);
+    let[accordionCollapsed, setAccordioncollapsed] = useState<boolean>(false);
 
     return (
         <div className={"App"}>
@@ -30,8 +31,10 @@ function App(props:any) {
 {/*
             <Rating value={3}/>
 */}
-            <Accordion titleValue={"Menu"} />
-            <Accordion titleValue={"Users"} />
+            <Accordion titleValue={"Menu"} collapsed={accordionCollapsed}
+                       onClick={setAccordioncollapsed}/>
+            <Accordion titleValue={"Users"} collapsed={accordionCollapsed}
+                       onClick={setAccordioncollapsed}/>
 
             <UncontrolledAccordion titleValue={"Menu"}/>
             <UncontrolledAccordion titleValue={"Users"}/>
