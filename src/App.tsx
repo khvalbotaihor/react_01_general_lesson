@@ -32,12 +32,16 @@ function App(props:any) {
             <Rating value={3}/>
 */}
             <Accordion titleValue={"Menu"} collapsed={accordionCollapsed}
-                       onClick={setAccordioncollapsed}/>
-            <Accordion titleValue={"Users"} collapsed={accordionCollapsed}
-                       onClick={setAccordioncollapsed}/>
+                        onChange={()=>{setAccordioncollapsed(!accordionCollapsed)}}/>
 
-            <UncontrolledAccordion titleValue={"Menu"}/>
-            <UncontrolledAccordion titleValue={"Users"}/>
+            <Accordion titleValue={"OOOMenu"} collapsed={accordionCollapsed}
+                        onChange={()=>{setAccordioncollapsed(!accordionCollapsed)}}
+            />
+{/*            <Accordion titleValue={"Users"} collapsed={accordionCollapsed}
+                       onClick={setAccordioncollapsed}/>*/}
+
+            <UncontrolledAccordion titleValue={"UnMenu"}/>
+            <UncontrolledAccordion titleValue={"UnUsers"}/>
 
             Article 2
             <Rating value={ratingValue}
