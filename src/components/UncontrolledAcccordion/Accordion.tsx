@@ -11,9 +11,7 @@ let [collapsed, SetCollapsed] = useState(true);
     console.log("Accordion rendering");
         return (
             <div>
-            <AccordionTitle title={props.titleValue}/><button onClick={()=>{
-                if(collapsed===true)SetCollapsed(false)
-                else {SetCollapsed(true)}
+            <AccordionTitle title={props.titleValue}/><button onClick={()=>{SetCollapsed(!collapsed)
                 }}>Toggle</button>
                 {!collapsed &&  <AccordionBody/>}
         </div>

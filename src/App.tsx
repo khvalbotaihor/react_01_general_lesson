@@ -22,7 +22,7 @@ function App() {
     //бейбел траспілятор перетворює JSX в обичний JS код
 
     return (
-        <div>
+        <div className={"App"}>
             <PageTitle title={"This is App component"}/>
             <PageTitle title={"My friends"}/>
             Article 1
@@ -49,9 +49,9 @@ function App() {
             <OnOff />
 
 
-{/*
+
           <UncontrolledRating />
-*/}
+
 
 
         </div>
