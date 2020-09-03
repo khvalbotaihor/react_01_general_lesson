@@ -67,7 +67,7 @@ function App(props:any) {
           <UncontrolledRating />
           <UncontrolledRating />
 
-            <UncontrolledOnOff on={switchOn} onChange={setSwitchOn}/>
+            <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
 
 
         </div>
