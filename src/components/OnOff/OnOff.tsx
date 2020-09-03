@@ -5,8 +5,10 @@ type PropsType = {
 }
 
 export function OnOff(props:PropsType) {
-
+    console.log("OnOff rendering")
     let [on, setOn] = useState(false); // hook use state
+
+    console.log("on:"+on);
 
     const onStyle = {
         width:"30px",

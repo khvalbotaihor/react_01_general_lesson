@@ -38,6 +38,8 @@ function App() {
 
             <OnOff />
 
+            <OnOff />
+
 
 
         </div>
