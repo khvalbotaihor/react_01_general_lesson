@@ -68,7 +68,7 @@ function App(props:any) {
           <UncontrolledRating />
 
             <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
-
+            <UncontrolledAccordion titleValue={"BlaBla name"} />
 
         </div>
     );
