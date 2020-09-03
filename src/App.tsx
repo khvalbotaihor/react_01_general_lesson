@@ -5,6 +5,7 @@ import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {OnOff} from '../src/components/OnOff/OnOff'
 import {UncontrolledAccordion} from "./components/UncontrolledAcccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
+import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 
 function sum(a:number,b:number) {
     alert(a+b)
@@ -22,6 +23,8 @@ function App(props:any) {
     //бейбел траспілятор перетворює JSX в обичний JS код
     let[ratingValue, setRatingValue] = useState<RatingValueType>(4);
     let[accordionCollapsed, setAccordioncollapsed] = useState<boolean>(false);
+    let[switchOn, setSwitchOn] = useState<boolean>(false);
+
 
     return (
         <div className={"App"}>
@@ -64,6 +67,7 @@ function App(props:any) {
           <UncontrolledRating />
           <UncontrolledRating />
 
+            <UncontrolledOnOff on={switchOn} onChange={setSwitchOn}/>
 
 
         </div>
